@@ -1,0 +1,10 @@
+div{
+    display: grid;
+    place-items: Center;
+    color: coral;
+}
+.form{
+padding: 10px;
+border-radius: 5px;
+box-shadow: 0px 10px 40px 0px;
+}
