@@ -9,9 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class LoginFormComponent implements OnInit {
   
   loginForm = new FormGroup({
-    id: new FormControl('',[Validators.minLength(9)]),
-    uname: new FormControl('',[Validators.maxLength(20)]),
-    pword: new FormControl('',[Validators.maxLength(20)])
+    Id: new FormControl('',[Validators.required, Validators.minLength(5)]),
+    uname: new FormControl('',[Validators.required, Validators.maxLength(20)]),
+    pword: new FormControl('',[Validators.required, Validators.pattern("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%&]).{6,20}$")])
   })
   constructor() { }
 

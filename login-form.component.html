@@ -1,0 +1,65 @@
+<h1>Login Form</h1>
+<div class="container col-md-4">
+    <form [formGroup]="loginForm">
+        <div class="form-group col-10">
+            <label class="form-label">Id</label>
+            
+            <input type ="Id" class="form-control" type="text" placeholder="Enter new Unique user Id"name="id" formControlName="id">
+            <div style="color:blueviolet ;" *ngIf="id?.touched && id?.errors?.['minlength']">User must be 5 characters or more.</div>
+            <div style="color:blueviolet ;" *ngIf="id?.touched && id?.errors?.['required']">Required field.</div>
+        </div>
+        <br>
+        <div class="form-group col-10">
+            <label class="form-label">Username</label>
+            
+            <input type ="Username" class="form-control" type="text" placeholder="Enter new Username"name="uname" formControlName="username">
+            <div style="color:blueviolet ;" *ngIf="uname?.touched && uname?.errors?.['minlength']">User must be 5 characters or more.</div>
+            <div style="color:blueviolet ;" *ngIf="uname?.touched && uname?.errors?.['required']">Required field.</div>
+        </div>
+        <br>
+        <div class="form-group col-10">
+            <label class="form-label">Password</label>
+            
+            <input type ="pword" class="form-control" type="text" placeholder="Enter password" name="password" formControlName="password">
+            <div style="color:blueviolet ;" *ngIf="pword?.touched && pword?.errors?.['pattern']">Password must contain 1 number, a lower an upper case number and at least one of these characters:(!@#$%&).</div>
+            <div style="color:blueviolet ;" *ngIf="pword?.touched && pword?.errors?.['required']">Required field.</div>
+        </div>
+        <br>
+        
+        <button class="btn btn-primary">Submit</button>
+    </form>   
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <h1>Login Form</h1>
+
+    <form [formGroup]="loginForm" >
+
+       Unique user id<input name="id"  placeholder="Enter your user id" formControlName="id">
+        <div class="span" *ngIf="id && id?.errors?.['minlength'] && id?.touched"> Enter your User Id</div>
+        
+        <br/>
+
+        Username <input name="uname" placeholder="Enter your username"  formControlName="uname"/>
+        <div class = "span" *ngIf="uname && uname?.errors?.['minlength'] && uname?.touched">Enter your username</div>
+        <br/>
+
+        Password <input name="pword"  placeholder="Enter your password" formControlName="pword"/>
+        <div class = "span" *ngIf="pword && pword?.errors?.['minlength'] && pword?.touched">
+            Enter your password</div>
+        <br/>
+        <button >Login</button>
+    </form>
+    
+</div> -->
